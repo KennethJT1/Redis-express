@@ -1,0 +1,39 @@
+### REGISTER USER
+
+POST http://localhost:3234/register HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Jane",    
+    "password": "1862"
+}
+
+### LOGIN USER
+POST http://localhost:3234/login HTTP/1.1
+content-type: application/json
+
+{
+   "username": "Jane",
+    "password": "1862"
+}
+
+### Dashboard USER
+GET http://localhost:3234/dashboard HTTP/1.1
+Content-Type: application/xml
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkxYjM2MWRhYzA5MTQ4NDVhNmU4YTYiLCJpYXQiOjE2ODcyNzAyNDgsImV4cCI6MTY4NzI3MDI3OH0.FtRP_V7h_RWZs38QzqTHABTnD5uGLGTJgSKfFi-Ocf0
+
+
+### REFRESH TOKEN
+POST http://localhost:3234/token HTTP/1.1
+content-type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvbHV3YXRvbWl3YSIsImlhdCI6MTY4NzI0Mzc2MSwiZXhwIjoxNjg5ODM1NzYxfQ._O2ddkXSsgqkR3vLMi4sF569kNmgpaS7aDnLTMhW41I
+
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJvbHV3YXRvbWl3YSIsImlhdCI6MTY4NzI0NDAzNywiZXhwIjoxNjg5ODM2MDM3fQ.iOSusc6xQCluFQof4-_Zp0F3VEtzwW5yNZnGnTz_sMk"
+}
+
+
+### LOGOUT
+GET http://localhost:3234/logout HTTP/1.1
+content-type: application/json
